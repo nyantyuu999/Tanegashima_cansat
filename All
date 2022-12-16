@@ -180,6 +180,16 @@ int main(){
 #GPS誘導==============
 #入力→、出力→モータ
 def GPS_run():
+　　　　#現在地
+　　　　lon=139.767120 #[度]
+　　　　緯度=35.681079 #[度]
+
+　　　　
+　　　　#座標系にして距離と方位角をだす
+　　　　grs80 = pyproj.Geod(ellps='GRS80')  # GRS80楕円体
+　　　　head, bkw_azimuth, dis = grs80.inv(lon, lat, glon, glat)
+
+　　　　印刷(head、bkw_azimuth、ディス)
 
 #画像処理誘導==========
 #入力→カメラ、出力→モータ
