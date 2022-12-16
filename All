@@ -8,6 +8,9 @@ import csv
 import RPi.GPIO as GPIO
 import pigpio
 import numpy
+from pyproj import Proj
+import numpy as np
+
 #初期設定==============
 
 #9軸のi2cccアドレス
